@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_69b5f04c422a7cafe2d0e32f9eb03524" kind="dir">
+    <compoundname>src/Contract</compoundname>
+    <innerdir refid="dir_adb00d217b0fbe73ddaca15ae98db134">src/Contract/Helper</innerdir>
+    <innerdir refid="dir_88a079d565c1e83169fe57e4cb2e68be">src/Contract/Service</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Contract/"/>
+  </compounddef>
+</doxygen>

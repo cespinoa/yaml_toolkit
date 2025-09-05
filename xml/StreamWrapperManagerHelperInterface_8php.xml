@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="StreamWrapperManagerHelperInterface_8php" kind="file" language="PHP">
+    <compoundname>StreamWrapperManagerHelperInterface.php</compoundname>
+    <innerclass refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" prot="public">Drupal::yaml_toolkit::Contract::Helper::StreamWrapperManagerHelperInterface</innerclass>
+    <innernamespace refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper">Drupal::yaml_toolkit::Contract::Helper</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">&lt;?php</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Drupal\yaml_toolkit\Contract\Helper;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" kindref="compound">StreamWrapperManagerHelperInterface</ref><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/><ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface_1a6ed8c53126853079a451c1592fc148c3" kindref="member">getScheme</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>$filePath):<sp/>bool;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/Contract/Helper/StreamWrapperManagerHelperInterface.php"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,832 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage" kind="class" language="PHP" prot="public">
+    <compoundname>Drupal::yaml_toolkit::Service::YamlStorage</compoundname>
+    <basecompoundref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface" prot="public" virt="non-virtual">Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a753fec399eab689bef0662b86b0abb1a" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_SUCCESS</definition>
+        <argsstring></argsstring>
+        <name>ERROR_SUCCESS</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_SUCCESS</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="17" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a599aa2da27007d45757cdb85d8b240b7" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_EMPTY_PATH</definition>
+        <argsstring></argsstring>
+        <name>ERROR_EMPTY_PATH</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_EMPTY_PATH</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="18" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a5a12fda33cf900ec04474ccead97eee6" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_FILE_NOT_FOUND</definition>
+        <argsstring></argsstring>
+        <name>ERROR_FILE_NOT_FOUND</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_FILE_NOT_FOUND</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="19" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a63232e5e72a913e443d9b9260381c3b2" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_FILE_NOT_READABLE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_FILE_NOT_READABLE</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_FILE_NOT_READABLE</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="20" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a42bda8d83d07bdad2bc04043a097fcb5" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_FILE_NOT_WRITABLE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_FILE_NOT_WRITABLE</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_FILE_NOT_WRITABLE</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="21" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a0803cdc45abb5493be283530de9fad6d" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_READ_FAILED</definition>
+        <argsstring></argsstring>
+        <name>ERROR_READ_FAILED</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_READ_FAILED</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="22" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af43c9efb5b0468c139a87657472b941f" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_EMPTY_FILE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_EMPTY_FILE</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_EMPTY_FILE</qualifiedname>
+        <initializer>= 6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="23" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aca7d61df1bbf944d82f447950ffbbbaf" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_NO_YAML_DATA</definition>
+        <argsstring></argsstring>
+        <name>ERROR_NO_YAML_DATA</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_NO_YAML_DATA</qualifiedname>
+        <initializer>= 7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="24" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ac992145cfafdb123ab5bdcb7c934fb49" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_WRITE_FAILED</definition>
+        <argsstring></argsstring>
+        <name>ERROR_WRITE_FAILED</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_WRITE_FAILED</qualifiedname>
+        <initializer>= 8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="25" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a18658987411a180ec004ed238f0c9423" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlStorage::ERROR_NO_DATA</definition>
+        <argsstring></argsstring>
+        <name>ERROR_NO_DATA</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\ERROR_NO_DATA</qualifiedname>
+        <initializer>= 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="26" column="9" bodyfile="src/Service/YamlStorage.php" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a2c46a4aa6beab79d35424cbc4253afcf" prot="protected" static="no" mutable="no">
+        <type>FileSystemInterface</type>
+        <definition>FileSystemInterface Drupal\yaml_toolkit\Service\YamlStorage::$fileSystem</definition>
+        <argsstring></argsstring>
+        <name>$fileSystem</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$fileSystem</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The FileSystemInterface Service. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="31" column="33" bodyfile="src/Service/YamlStorage.php" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1acf7fde21049dfad18a48c202fb4b98eb" prot="protected" static="no" mutable="no">
+        <type>LoggerChannelFactoryInterface</type>
+        <definition>LoggerChannelFactoryInterface Drupal\yaml_toolkit\Service\YamlStorage::$loggerFactory</definition>
+        <argsstring></argsstring>
+        <name>$loggerFactory</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$loggerFactory</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The LoggerChannelFactoryInterface Service. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="36" column="43" bodyfile="src/Service/YamlStorage.php" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a433532695b83ddd8110cabfca39bdad2" prot="protected" static="no" mutable="no">
+        <type>MessengerInterface</type>
+        <definition>MessengerInterface Drupal\yaml_toolkit\Service\YamlStorage::$messenger</definition>
+        <argsstring></argsstring>
+        <name>$messenger</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$messenger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The MessengerInterface Service. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="41" column="32" bodyfile="src/Service/YamlStorage.php" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1afa0a9d2b0c3e06a1fe3ba638bf98e89b" prot="protected" static="no" mutable="no">
+        <type><ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface" kindref="compound">YamlValidatorInterface</ref></type>
+        <definition>YamlValidatorInterface Drupal\yaml_toolkit\Service\YamlStorage::$yamlValidator</definition>
+        <argsstring></argsstring>
+        <name>$yamlValidator</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$yamlValidator</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The YamlValidatorInterface Service. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="46" column="36" bodyfile="src/Service/YamlStorage.php" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af16a267f8d52987314ece2442a791685" prot="protected" static="no" mutable="no">
+        <type><ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" kindref="compound">StreamWrapperManagerHelperInterface</ref></type>
+        <definition>StreamWrapperManagerHelperInterface Drupal\yaml_toolkit\Service\YamlStorage::$streamWrapperManagerHelper</definition>
+        <argsstring></argsstring>
+        <name>$streamWrapperManagerHelper</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$streamWrapperManagerHelper</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The StreamWrapperManagerHelperInterface Service. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="51" column="49" bodyfile="src/Service/YamlStorage.php" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aeb04f80aab3c5b88ab7ceeef0f4e437d" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Drupal\yaml_toolkit\Service\YamlStorage::$absolutePath</definition>
+        <argsstring></argsstring>
+        <name>$absolutePath</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$absolutePath</qualifiedname>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file absolute path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="56" column="20" bodyfile="src/Service/YamlStorage.php" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a4da8b6612f8a9b52a532a96edca72dcb" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string Drupal\yaml_toolkit\Service\YamlStorage::$filename</definition>
+        <argsstring></argsstring>
+        <name>$filename</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$filename</qualifiedname>
+        <initializer>= &apos;&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The file name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="61" column="20" bodyfile="src/Service/YamlStorage.php" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a0d27b38a9217e159354ef10d025996af" prot="protected" static="no" mutable="no">
+        <type>array</type>
+        <definition>array Drupal\yaml_toolkit\Service\YamlStorage::$info</definition>
+        <argsstring></argsstring>
+        <name>$info</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\$info</qualifiedname>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Info about some params.</para>
+<para>The array contents:<itemizedlist>
+<listitem><para>stage: load or save.</para>
+</listitem><listitem><para>logger: the logger channel, default yaml_toolkit.</para>
+</listitem><listitem><para>verbose: display messages or not. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="71" column="19" bodyfile="src/Service/YamlStorage.php" bodystart="71" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a4068c88d083b859d1c32585126ae516f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::__construct</definition>
+        <argsstring>(FileSystemInterface $fileSystem, LoggerChannelFactoryInterface $loggerFactory, MessengerInterface $messenger, YamlValidatorInterface $yamlValidator, StreamWrapperManagerHelperInterface $streamWrapperManagerHelper,)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\__construct</qualifiedname>
+        <param>
+          <type>FileSystemInterface</type>
+          <declname>$fileSystem</declname>
+        </param>
+        <param>
+          <type>LoggerChannelFactoryInterface</type>
+          <declname>$loggerFactory</declname>
+        </param>
+        <param>
+          <type>MessengerInterface</type>
+          <declname>$messenger</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface" kindref="compound">YamlValidatorInterface</ref></type>
+          <declname>$yamlValidator</declname>
+        </param>
+        <param>
+          <type><ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" kindref="compound">StreamWrapperManagerHelperInterface</ref></type>
+          <declname>$streamWrapperManagerHelper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="76" column="19" bodyfile="src/Service/YamlStorage.php" bodystart="76" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a70a5e23d0c5acff2ac689af1b0498932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::getInfo</definition>
+        <argsstring>()</argsstring>
+        <name>getInfo</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\getInfo</qualifiedname>
+        <reimplements refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1adb51a6baab6569594cd65e1f832367ff">getInfo</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the last validation info.</para>
+<para><simplesect kind="return"><para>array Error code and error text of the last operation. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="96" column="19" bodyfile="src/Service/YamlStorage.php" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a3bbc6028cc81f30444e81ab0d6446cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::load</definition>
+        <argsstring>(string $filePath, string $loggerChannel=&apos;default&apos;, bool $verbose=FALSE)</argsstring>
+        <name>load</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\load</qualifiedname>
+        <reimplements refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1af11500171b0b8d53c0e255c60a7f0297">load</reimplements>
+        <param>
+          <type>string</type>
+          <declname>$filePath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>$loggerChannel</declname>
+          <defval>&apos;default&apos;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>$verbose</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{<para>Load YAML data from a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the YAML file (supports stream wrappers). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$loggerChannel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The logger channel to use for error logging. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>bool</parametertype>
+<parametername>$verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If TRUE, display errors in UI messenger in addition to logging.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array|false Parsed YAML data as array, or FALSE on failure. Use <ref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1adb51a6baab6569594cd65e1f832367ff" kindref="member">getInfo()</ref> to retrieve detailed error information.</para>
+</simplesect>
+</para>
+} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="103" column="19" bodyfile="src/Service/YamlStorage.php" bodystart="103" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ad28f01fd9ebb5f195bc47138775e9218" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::save</definition>
+        <argsstring>(string $filePath, $data, string $loggerChannel=&apos;default&apos;, bool $verbose=FALSE)</argsstring>
+        <name>save</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\save</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$filePath</declname>
+        </param>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>$loggerChannel</declname>
+          <defval>&apos;default&apos;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>$verbose</declname>
+          <defval>FALSE</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="122" column="19" bodyfile="src/Service/YamlStorage.php" bodystart="122" bodyend="151"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aabdb8b88439439884ba9fec3c62b7611" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::resetState</definition>
+        <argsstring>(string $loggerChannel, bool $verbose, string $stage)</argsstring>
+        <name>resetState</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\resetState</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$loggerChannel</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>$verbose</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>$stage</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reset state for a new operation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="156" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="156" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a1763907a5d6908ffebea6188bb5cf7a7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::prepareFilePath</definition>
+        <argsstring>(string $filePath)</argsstring>
+        <name>prepareFilePath</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\prepareFilePath</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Resolve and prepare an absolute file path. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="166" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="166" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af175e2483264e2e3b3419118a2e4c714" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::checkFileExists</definition>
+        <argsstring>(string $absolutePath)</argsstring>
+        <name>checkFileExists</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\checkFileExists</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$absolutePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a file exists. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="179" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="179" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a19cb354dde361968f6e655d5403ac5bf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::checkFileReadable</definition>
+        <argsstring>(string $absolutePath)</argsstring>
+        <name>checkFileReadable</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\checkFileReadable</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$absolutePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a file is readable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="189" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="189" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ab8600076d3c7882bac959d5c20712ca5" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::checkFileWritable</definition>
+        <argsstring>(string $absolutePath)</argsstring>
+        <name>checkFileWritable</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\checkFileWritable</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$absolutePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a file is writable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="199" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="199" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae551a84ed0adacd38421a32b5bf74127" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::parseYamlFile</definition>
+        <argsstring>(string $absolutePath)</argsstring>
+        <name>parseYamlFile</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\parseYamlFile</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$absolutePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Parse YAML content from a file. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="209" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="209" bodyend="227"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af5c5d6be99982590c177a2cbb3655a20" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::checkYamlSyntax</definition>
+        <argsstring>($data)</argsstring>
+        <name>checkYamlSyntax</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\checkYamlSyntax</qualifiedname>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate YAML syntax. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="232" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="232" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a083dd3cb7431e36c30b8600a9caa64e1" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::writeYamlFile</definition>
+        <argsstring>(string $absolutePath, string $yamlContent)</argsstring>
+        <name>writeYamlFile</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\writeYamlFile</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$absolutePath</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>$yamlContent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write YAML content to a file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$absolutePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The file absolute path. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$yamlContent</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pre-validated YAML content.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool TRUE if file was saved, FALSE otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="262" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="262" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aa056fbf507e5cd7c81a8636f3b3825fe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::fail</definition>
+        <argsstring>(int $code, string $message, array $context=[])</argsstring>
+        <name>fail</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\fail</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>$code</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>$message</declname>
+        </param>
+        <param>
+          <type>array</type>
+          <declname>$context</declname>
+          <defval>[]</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper for logging and setting error info. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="276" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="276" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a6d445b5884a8ea7b68fe606311481bff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::sendLogError</definition>
+        <argsstring>(string $message)</argsstring>
+        <name>sendLogError</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\sendLogError</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log and optionally display an error message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="286" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="286" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae0c59ac688a185daa6d7aad09fa0a4cf" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::normalizeYamlString</definition>
+        <argsstring>(string $data)</argsstring>
+        <name>normalizeYamlString</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\normalizeYamlString</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function to normalize data string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="309" column="22" bodyfile="src/Service/YamlStorage.php" bodystart="309" bodyend="311"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae156ad06d1d499e96c03e5737ce5db4e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::isEmptyData</definition>
+        <argsstring>($data)</argsstring>
+        <name>isEmptyData</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\isEmptyData</qualifiedname>
+        <param>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper function to check if data is empty. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="298" column="20" bodyfile="src/Service/YamlStorage.php" bodystart="298" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a06497bc71a8d537edf6cbcff4dd15617" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlStorage::formatValidationError</definition>
+        <argsstring>(array $details)</argsstring>
+        <name>formatValidationError</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlStorage\formatValidationError</qualifiedname>
+        <param>
+          <type>array</type>
+          <declname>$details</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper to format the validation error result. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlStorage.php" line="316" column="20" bodyfile="src/Service/YamlStorage.php" bodystart="316" bodyend="325"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Service for loading and saving YAML files with validation and error handling. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface"/>
+      </node>
+      <node id="1">
+        <label>Drupal\yaml_toolkit\Service\YamlStorage</label>
+        <link refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>FileSystemInterface</label>
+      </node>
+      <node id="4">
+        <label>LoggerChannelFactoryInterface</label>
+      </node>
+      <node id="5">
+        <label>MessengerInterface</label>
+      </node>
+      <node id="7">
+        <label>Drupal\yaml_toolkit\Contract\Helper\StreamWrapperManagerHelperInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface"/>
+      </node>
+      <node id="2">
+        <label>Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface"/>
+      </node>
+      <node id="6">
+        <label>Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface"/>
+      </node>
+      <node id="1">
+        <label>Drupal\yaml_toolkit\Service\YamlStorage</label>
+        <link refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>$fileSystem</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>$loggerFactory</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>$messenger</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>$yamlValidator</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>$streamWrapperManagerHelper</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Service/YamlStorage.php" line="15" column="1" bodyfile="src/Service/YamlStorage.php" bodystart="15" bodyend="327"/>
+    <listofallmembers>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aeb04f80aab3c5b88ab7ceeef0f4e437d" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$absolutePath</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a4da8b6612f8a9b52a532a96edca72dcb" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$filename</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a2c46a4aa6beab79d35424cbc4253afcf" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$fileSystem</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a0d27b38a9217e159354ef10d025996af" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$info</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1acf7fde21049dfad18a48c202fb4b98eb" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$loggerFactory</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a433532695b83ddd8110cabfca39bdad2" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$messenger</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af16a267f8d52987314ece2442a791685" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$streamWrapperManagerHelper</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1afa0a9d2b0c3e06a1fe3ba638bf98e89b" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>$yamlValidator</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a4068c88d083b859d1c32585126ae516f" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>__construct</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af175e2483264e2e3b3419118a2e4c714" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>checkFileExists</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a19cb354dde361968f6e655d5403ac5bf" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>checkFileReadable</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ab8600076d3c7882bac959d5c20712ca5" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>checkFileWritable</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af5c5d6be99982590c177a2cbb3655a20" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>checkYamlSyntax</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af43c9efb5b0468c139a87657472b941f" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_EMPTY_FILE</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a599aa2da27007d45757cdb85d8b240b7" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_EMPTY_PATH</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a5a12fda33cf900ec04474ccead97eee6" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_FILE_NOT_FOUND</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a63232e5e72a913e443d9b9260381c3b2" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_FILE_NOT_READABLE</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a42bda8d83d07bdad2bc04043a097fcb5" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_FILE_NOT_WRITABLE</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a18658987411a180ec004ed238f0c9423" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_NO_DATA</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aca7d61df1bbf944d82f447950ffbbbaf" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_NO_YAML_DATA</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a0803cdc45abb5493be283530de9fad6d" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_READ_FAILED</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a753fec399eab689bef0662b86b0abb1a" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_SUCCESS</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ac992145cfafdb123ab5bdcb7c934fb49" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>ERROR_WRITE_FAILED</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aa056fbf507e5cd7c81a8636f3b3825fe" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>fail</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a06497bc71a8d537edf6cbcff4dd15617" prot="private" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>formatValidationError</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a70a5e23d0c5acff2ac689af1b0498932" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>getInfo</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae156ad06d1d499e96c03e5737ce5db4e" prot="private" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>isEmptyData</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a3bbc6028cc81f30444e81ab0d6446cad" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>load</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae0c59ac688a185daa6d7aad09fa0a4cf" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>normalizeYamlString</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae551a84ed0adacd38421a32b5bf74127" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>parseYamlFile</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a1763907a5d6908ffebea6188bb5cf7a7" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>prepareFilePath</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aabdb8b88439439884ba9fec3c62b7611" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>resetState</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ad28f01fd9ebb5f195bc47138775e9218" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>save</name></member>
+      <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a9124860a7ebc30335f7acf1bf3c08d7e" prot="public" virt="non-virtual" ambiguityscope="Drupal::yaml_toolkit::Contract::Service::YamlStorageInterface::"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>save</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a6d445b5884a8ea7b68fe606311481bff" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>sendLogError</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a083dd3cb7431e36c30b8600a9caa64e1" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlStorage</scope><name>writeYamlFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

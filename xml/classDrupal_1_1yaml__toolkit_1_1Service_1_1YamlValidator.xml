@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator" kind="class" language="PHP" prot="public">
+    <compoundname>Drupal::yaml_toolkit::Service::YamlValidator</compoundname>
+    <basecompoundref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface" prot="public" virt="non-virtual">Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface</basecompoundref>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1af71bb6db03221451fa7dd73a05946241" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlValidator::ERROR_SUCCESS</definition>
+        <argsstring></argsstring>
+        <name>ERROR_SUCCESS</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\ERROR_SUCCESS</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="21" column="9" bodyfile="src/Service/YamlValidator.php" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a1e79ee9c2012a3fde0b4d16d6f054d08" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlValidator::ERROR_VALIDATION_FAILED</definition>
+        <argsstring></argsstring>
+        <name>ERROR_VALIDATION_FAILED</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\ERROR_VALIDATION_FAILED</qualifiedname>
+        <initializer>= 10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="22" column="9" bodyfile="src/Service/YamlValidator.php" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a8da4c7bc19b771003c54c05e758a9c45" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlValidator::ERROR_SCALAR_VALUE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_SCALAR_VALUE</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\ERROR_SCALAR_VALUE</qualifiedname>
+        <initializer>= 11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="23" column="9" bodyfile="src/Service/YamlValidator.php" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1aefd90791fea941758c53a237d7ab28a2" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlValidator::ERROR_PARSE_FAILED</definition>
+        <argsstring></argsstring>
+        <name>ERROR_PARSE_FAILED</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\ERROR_PARSE_FAILED</qualifiedname>
+        <initializer>= 12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="24" column="9" bodyfile="src/Service/YamlValidator.php" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1ae1d938e0cc5b1b1566bc92782e6f1be5" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlValidator::ERROR_UNSUPPORTED_TYPE</definition>
+        <argsstring></argsstring>
+        <name>ERROR_UNSUPPORTED_TYPE</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\ERROR_UNSUPPORTED_TYPE</qualifiedname>
+        <initializer>= 13</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="25" column="9" bodyfile="src/Service/YamlValidator.php" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a83aecf53ceb00b2322d64f63e7850d47" prot="public" static="no" mutable="no">
+        <type>const</type>
+        <definition>const Drupal\yaml_toolkit\Service\YamlValidator::ERROR_NO_DATA</definition>
+        <argsstring></argsstring>
+        <name>ERROR_NO_DATA</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\ERROR_NO_DATA</qualifiedname>
+        <initializer>= 14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="26" column="9" bodyfile="src/Service/YamlValidator.php" bodystart="26" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a722a1679980668152f6c3d89baddbde1" prot="protected" static="no" mutable="no">
+        <type>array</type>
+        <definition>array Drupal\yaml_toolkit\Service\YamlValidator::$result</definition>
+        <argsstring></argsstring>
+        <name>$result</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\$result</qualifiedname>
+        <initializer>= []</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="33" column="19" bodyfile="src/Service/YamlValidator.php" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1ab74d1a0b78c14b958802856b56d99f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlValidator::checkYaml</definition>
+        <argsstring>($content)</argsstring>
+        <name>checkYaml</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\checkYaml</qualifiedname>
+        <reimplements refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1adf5425be52c46798f720b116890b5d84">checkYaml</reimplements>
+        <param>
+          <declname>$content</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validates YAML content in various formats.</para>
+<para>Supported input types:<itemizedlist>
+<listitem><para>String: Raw YAML content</para>
+</listitem><listitem><para>Array (indexed): Array of YAML strings to validate individually</para>
+</listitem><listitem><para>Array (associative): Structured data to dump as YAML and re-parse.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>mixed</parametertype>
+<parametername>$content</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The content to validate.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool TRUE if validation passes, FALSE otherwise. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="49" column="19" bodyfile="src/Service/YamlValidator.php" bodystart="49" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a0578413dc3059ba35c0c0b92a8a1117f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlValidator::getResult</definition>
+        <argsstring>()</argsstring>
+        <name>getResult</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\getResult</qualifiedname>
+        <reimplements refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1aba6b44abcb174f3eb23fba1d0cfa4106">getResult</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns detailed information from the last validation attempt.</para>
+<para><simplesect kind="return"><para>array An associative array with keys:<itemizedlist>
+<listitem><para>pass (boolean)</para>
+</listitem><listitem><para>validation_type (Array of strings|Structured array|Scalar)</para>
+</listitem><listitem><para>error_code 10 t0 14</para>
+</listitem><listitem><para>error short string wiht the description of error 10 YAML validation failed 11 Scalar value 12 Conversion to yaml failed 13 Unsupported input type 14 aml Validator has not received data</para>
+</listitem><listitem><para>error_description long description with info from Yaml exception class</para>
+</listitem><listitem><para>parsed (array|null)</para>
+</listitem><listitem><para>yaml (string|null)</para>
+</listitem><listitem><para>debug (aditional info) </para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="179" column="19" bodyfile="src/Service/YamlValidator.php" bodystart="179" bodyend="181"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a22d41443ad301e27b04d72ade529f9aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Service\YamlValidator::packArrayListErrors</definition>
+        <argsstring>($processInfo)</argsstring>
+        <name>packArrayListErrors</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\packArrayListErrors</qualifiedname>
+        <param>
+          <declname>$processInfo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Packs all errors as one message string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$processInfo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The processInfo of checking string array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string The error message </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="192" column="20" bodyfile="src/Service/YamlValidator.php" bodystart="192" bodyend="201"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1af7bf0c172e98039e546c6d32a5acaee3" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Drupal\yaml_toolkit\Service\YamlValidator::checkStringArray</definition>
+        <argsstring>(array $snippets)</argsstring>
+        <name>checkStringArray</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\checkStringArray</qualifiedname>
+        <param>
+          <type>array</type>
+          <declname>$snippets</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate an array of YAML strings (snippets).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$snippets</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Array of YAML strings.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array List of validation processInfos. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="212" column="29" bodyfile="src/Service/YamlValidator.php" bodystart="212" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a10788b067732707863a1f9df63689a60" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Drupal\yaml_toolkit\Service\YamlValidator::checkYamlString</definition>
+        <argsstring>(string $snippet, ?int $index=NULL)</argsstring>
+        <name>checkYamlString</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\checkYamlString</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>$snippet</declname>
+        </param>
+        <param>
+          <type>?int</type>
+          <declname>$index</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate a raw YAML string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$snippet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>YAML content as string. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametertype>int</parametertype>
+<parametertype>null</parametertype>
+<parametername>$index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional index (used when validating an array of snippets).</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array Validation processInfo. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="242" column="29" bodyfile="src/Service/YamlValidator.php" bodystart="242" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a9c7bab26f64d9045385020d96cc88d5e" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>static</type>
+        <definition>static Drupal\yaml_toolkit\Service\YamlValidator::checkStructuredArray</definition>
+        <argsstring>(array $data)</argsstring>
+        <name>checkStructuredArray</name>
+        <qualifiedname>Drupal\yaml_toolkit\Service\YamlValidator\checkStructuredArray</qualifiedname>
+        <param>
+          <type>array</type>
+          <declname>$data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Validate a structured PHP array by dumping and re-parsing as YAML.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>array</parametertype>
+<parametername>$data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Structured array.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>array Validation result. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Service/YamlValidator.php" line="273" column="29" bodyfile="src/Service/YamlValidator.php" bodystart="273" bodyend="295"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Provides tolerant validation for YAML input.</para>
+<para>This class accepts different input types:<itemizedlist>
+<listitem><para>A structured PHP array (will be dumped and re-parsed as YAML).</para>
+</listitem><listitem><para>An array of YAML strings (snippets).</para>
+</listitem><listitem><para>A raw YAML string (e.g. from a textarea).</para>
+</listitem></itemizedlist>
+</para>
+<para>The main function checkYaml returns </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface"/>
+      </node>
+      <node id="1">
+        <label>Drupal\yaml_toolkit\Service\YamlValidator</label>
+        <link refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface"/>
+      </node>
+      <node id="1">
+        <label>Drupal\yaml_toolkit\Service\YamlValidator</label>
+        <link refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Service/YamlValidator.php" line="19" column="1" bodyfile="src/Service/YamlValidator.php" bodystart="19" bodyend="297"/>
+    <listofallmembers>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a722a1679980668152f6c3d89baddbde1" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>$result</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1af7bf0c172e98039e546c6d32a5acaee3" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>checkStringArray</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a9c7bab26f64d9045385020d96cc88d5e" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>checkStructuredArray</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1ab74d1a0b78c14b958802856b56d99f6f" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>checkYaml</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a10788b067732707863a1f9df63689a60" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>checkYamlString</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a83aecf53ceb00b2322d64f63e7850d47" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>ERROR_NO_DATA</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1aefd90791fea941758c53a237d7ab28a2" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>ERROR_PARSE_FAILED</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a8da4c7bc19b771003c54c05e758a9c45" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>ERROR_SCALAR_VALUE</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1af71bb6db03221451fa7dd73a05946241" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>ERROR_SUCCESS</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1ae1d938e0cc5b1b1566bc92782e6f1be5" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>ERROR_UNSUPPORTED_TYPE</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a1e79ee9c2012a3fde0b4d16d6f054d08" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>ERROR_VALIDATION_FAILED</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a0578413dc3059ba35c0c0b92a8a1117f" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>getResult</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a22d41443ad301e27b04d72ade529f9aa" prot="private" virt="non-virtual"><scope>Drupal::yaml_toolkit::Service::YamlValidator</scope><name>packArrayListErrors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

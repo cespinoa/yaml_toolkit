@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_adb00d217b0fbe73ddaca15ae98db134" kind="dir">
+    <compoundname>src/Contract/Helper</compoundname>
+    <innerfile refid="StreamWrapperManagerHelperInterface_8php">StreamWrapperManagerHelperInterface.php</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Contract/Helper/"/>
+  </compounddef>
+</doxygen>

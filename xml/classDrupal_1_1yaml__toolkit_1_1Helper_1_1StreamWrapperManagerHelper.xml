@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper" kind="class" language="PHP" prot="public">
+    <compoundname>Drupal::yaml_toolkit::Helper::StreamWrapperManagerHelper</compoundname>
+    <basecompoundref refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" prot="public" virt="non-virtual">Drupal\yaml_toolkit\Contract\Helper\StreamWrapperManagerHelperInterface</basecompoundref>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a39ed77acb6675afe660f1b0e18da386a" prot="protected" static="no" mutable="no">
+        <type>StreamWrapperManagerInterface</type>
+        <definition>StreamWrapperManagerInterface Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper::$streamWrapperManager</definition>
+        <argsstring></argsstring>
+        <name>$streamWrapperManager</name>
+        <qualifiedname>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper\$streamWrapperManager</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The StreamWrapperManagerInterface service. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Helper/StreamWrapperManagerHelper.php" line="18" column="43" bodyfile="src/Helper/StreamWrapperManagerHelper.php" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a25f6895bddec93e0ebb8845ee2aefcfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper::__construct</definition>
+        <argsstring>(StreamWrapperManagerInterface $streamWrapperManager,)</argsstring>
+        <name>__construct</name>
+        <qualifiedname>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper\__construct</qualifiedname>
+        <param>
+          <type>StreamWrapperManagerInterface</type>
+          <declname>$streamWrapperManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Helper/StreamWrapperManagerHelper.php" line="23" column="19" bodyfile="src/Helper/StreamWrapperManagerHelper.php" bodystart="23" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a06cf3a2a481bc7e8916186e2a61b73b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper::getScheme</definition>
+        <argsstring>(string $filePath)</argsstring>
+        <name>getScheme</name>
+        <qualifiedname>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper\getScheme</qualifiedname>
+        <reimplements refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface_1a6ed8c53126853079a451c1592fc148c3">getScheme</reimplements>
+        <param>
+          <type>string</type>
+          <declname>$filePath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>{<para>Check the file schema.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametertype>string</parametertype>
+<parametername>$filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path of the file from which the schema is searched.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool True if $filePath contains scheme (private, public...).</para>
+</simplesect>
+</para>
+} </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Helper/StreamWrapperManagerHelper.php" line="32" column="19" bodyfile="src/Helper/StreamWrapperManagerHelper.php" bodystart="32" bodyend="34"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Helper to avoid direct use of streamWrapperManager.</para>
+<para>StreamWrapperManager is not compatible with unit tests. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Drupal\yaml_toolkit\Contract\Helper\StreamWrapperManagerHelperInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface"/>
+      </node>
+      <node id="1">
+        <label>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper</label>
+        <link refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>StreamWrapperManagerInterface</label>
+      </node>
+      <node id="2">
+        <label>Drupal\yaml_toolkit\Contract\Helper\StreamWrapperManagerHelperInterface</label>
+        <link refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface"/>
+      </node>
+      <node id="1">
+        <label>Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper</label>
+        <link refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>$streamWrapperManager</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/Helper/StreamWrapperManagerHelper.php" line="13" column="1" bodyfile="src/Helper/StreamWrapperManagerHelper.php" bodystart="13" bodyend="36"/>
+    <listofallmembers>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a39ed77acb6675afe660f1b0e18da386a" prot="protected" virt="non-virtual"><scope>Drupal::yaml_toolkit::Helper::StreamWrapperManagerHelper</scope><name>$streamWrapperManager</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a25f6895bddec93e0ebb8845ee2aefcfd" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Helper::StreamWrapperManagerHelper</scope><name>__construct</name></member>
+      <member refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a06cf3a2a481bc7e8916186e2a61b73b6" prot="public" virt="non-virtual"><scope>Drupal::yaml_toolkit::Helper::StreamWrapperManagerHelper</scope><name>getScheme</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

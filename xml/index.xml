@@ -1,0 +1,144 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper" kind="class"><name>Drupal::yaml_toolkit::Helper::StreamWrapperManagerHelper</name>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a39ed77acb6675afe660f1b0e18da386a" kind="variable"><name>$streamWrapperManager</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a25f6895bddec93e0ebb8845ee2aefcfd" kind="function"><name>__construct</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper_1a06cf3a2a481bc7e8916186e2a61b73b6" kind="function"><name>getScheme</name></member>
+  </compound>
+  <compound refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" kind="interface"><name>Drupal::yaml_toolkit::Contract::Helper::StreamWrapperManagerHelperInterface</name>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface_1a6ed8c53126853079a451c1592fc148c3" kind="function"><name>getScheme</name></member>
+  </compound>
+  <compound refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage" kind="class"><name>Drupal::yaml_toolkit::Service::YamlStorage</name>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a753fec399eab689bef0662b86b0abb1a" kind="variable"><name>ERROR_SUCCESS</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a599aa2da27007d45757cdb85d8b240b7" kind="variable"><name>ERROR_EMPTY_PATH</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a5a12fda33cf900ec04474ccead97eee6" kind="variable"><name>ERROR_FILE_NOT_FOUND</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a63232e5e72a913e443d9b9260381c3b2" kind="variable"><name>ERROR_FILE_NOT_READABLE</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a42bda8d83d07bdad2bc04043a097fcb5" kind="variable"><name>ERROR_FILE_NOT_WRITABLE</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a0803cdc45abb5493be283530de9fad6d" kind="variable"><name>ERROR_READ_FAILED</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af43c9efb5b0468c139a87657472b941f" kind="variable"><name>ERROR_EMPTY_FILE</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aca7d61df1bbf944d82f447950ffbbbaf" kind="variable"><name>ERROR_NO_YAML_DATA</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ac992145cfafdb123ab5bdcb7c934fb49" kind="variable"><name>ERROR_WRITE_FAILED</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a18658987411a180ec004ed238f0c9423" kind="variable"><name>ERROR_NO_DATA</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a2c46a4aa6beab79d35424cbc4253afcf" kind="variable"><name>$fileSystem</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1acf7fde21049dfad18a48c202fb4b98eb" kind="variable"><name>$loggerFactory</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a433532695b83ddd8110cabfca39bdad2" kind="variable"><name>$messenger</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1afa0a9d2b0c3e06a1fe3ba638bf98e89b" kind="variable"><name>$yamlValidator</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af16a267f8d52987314ece2442a791685" kind="variable"><name>$streamWrapperManagerHelper</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aeb04f80aab3c5b88ab7ceeef0f4e437d" kind="variable"><name>$absolutePath</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a4da8b6612f8a9b52a532a96edca72dcb" kind="variable"><name>$filename</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a0d27b38a9217e159354ef10d025996af" kind="variable"><name>$info</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a4068c88d083b859d1c32585126ae516f" kind="function"><name>__construct</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a70a5e23d0c5acff2ac689af1b0498932" kind="function"><name>getInfo</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a3bbc6028cc81f30444e81ab0d6446cad" kind="function"><name>load</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ad28f01fd9ebb5f195bc47138775e9218" kind="function"><name>save</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aabdb8b88439439884ba9fec3c62b7611" kind="function"><name>resetState</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a1763907a5d6908ffebea6188bb5cf7a7" kind="function"><name>prepareFilePath</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af175e2483264e2e3b3419118a2e4c714" kind="function"><name>checkFileExists</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a19cb354dde361968f6e655d5403ac5bf" kind="function"><name>checkFileReadable</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ab8600076d3c7882bac959d5c20712ca5" kind="function"><name>checkFileWritable</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae551a84ed0adacd38421a32b5bf74127" kind="function"><name>parseYamlFile</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1af5c5d6be99982590c177a2cbb3655a20" kind="function"><name>checkYamlSyntax</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a083dd3cb7431e36c30b8600a9caa64e1" kind="function"><name>writeYamlFile</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1aa056fbf507e5cd7c81a8636f3b3825fe" kind="function"><name>fail</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a6d445b5884a8ea7b68fe606311481bff" kind="function"><name>sendLogError</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae0c59ac688a185daa6d7aad09fa0a4cf" kind="function"><name>normalizeYamlString</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1ae156ad06d1d499e96c03e5737ce5db4e" kind="function"><name>isEmptyData</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage_1a06497bc71a8d537edf6cbcff4dd15617" kind="function"><name>formatValidationError</name></member>
+  </compound>
+  <compound refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface" kind="interface"><name>Drupal::yaml_toolkit::Contract::Service::YamlStorageInterface</name>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a1de421ea0ec7827c6e8f4a4f0bd4b160" kind="variable"><name>ERROR_SUCCESS</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a89918c68b29fb0a9682e6326d23402e1" kind="variable"><name>ERROR_EMPTY_PATH</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1af471abf405d68e920256e7663223d0db" kind="variable"><name>ERROR_FILE_NOT_FOUND</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a22d1d7f35f0c558f17bf50f761e50346" kind="variable"><name>ERROR_FILE_NOT_READABLE</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1ab5d5d27011fc9a7fd062a2a32eae0c66" kind="variable"><name>ERROR_FILE_NOT_WRITABLE</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a9f2140794fbe791d8cbd03dccca33876" kind="variable"><name>ERROR_READ_FAILED</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1aa74478be02220dbf0099102dfb941f9c" kind="variable"><name>ERROR_EMPTY_FILE</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1ada3d7eee45b8584737df43f14eb40264" kind="variable"><name>ERROR_NO_YAML_DATA</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1acf4ef4b96fe955f266ecdd0cec36e09e" kind="variable"><name>ERROR_WRITE_FAILED</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a2b75298fcfe6b372f2b11c1fabfc464d" kind="variable"><name>ERROR_NO_DATA</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1a9124860a7ebc30335f7acf1bf3c08d7e" kind="function"><name>save</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1af11500171b0b8d53c0e255c60a7f0297" kind="function"><name>load</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface_1adb51a6baab6569594cd65e1f832367ff" kind="function"><name>getInfo</name></member>
+  </compound>
+  <compound refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator" kind="class"><name>Drupal::yaml_toolkit::Service::YamlValidator</name>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1af71bb6db03221451fa7dd73a05946241" kind="variable"><name>ERROR_SUCCESS</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a1e79ee9c2012a3fde0b4d16d6f054d08" kind="variable"><name>ERROR_VALIDATION_FAILED</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a8da4c7bc19b771003c54c05e758a9c45" kind="variable"><name>ERROR_SCALAR_VALUE</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1aefd90791fea941758c53a237d7ab28a2" kind="variable"><name>ERROR_PARSE_FAILED</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1ae1d938e0cc5b1b1566bc92782e6f1be5" kind="variable"><name>ERROR_UNSUPPORTED_TYPE</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a83aecf53ceb00b2322d64f63e7850d47" kind="variable"><name>ERROR_NO_DATA</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a722a1679980668152f6c3d89baddbde1" kind="variable"><name>$result</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1ab74d1a0b78c14b958802856b56d99f6f" kind="function"><name>checkYaml</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a0578413dc3059ba35c0c0b92a8a1117f" kind="function"><name>getResult</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a22d41443ad301e27b04d72ade529f9aa" kind="function"><name>packArrayListErrors</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1af7bf0c172e98039e546c6d32a5acaee3" kind="function"><name>checkStringArray</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a10788b067732707863a1f9df63689a60" kind="function"><name>checkYamlString</name></member>
+    <member refid="classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator_1a9c7bab26f64d9045385020d96cc88d5e" kind="function"><name>checkStructuredArray</name></member>
+  </compound>
+  <compound refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface" kind="interface"><name>Drupal::yaml_toolkit::Contract::Service::YamlValidatorInterface</name>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1a8341880a4074e1dbaf82336bba5fd0ec" kind="variable"><name>ERROR_SUCCESS</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1a4a9c0473b2c0e1fe448fa0c9e9f45e25" kind="variable"><name>ERROR_VALIDATION_FAILED</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1a5d240ac8dc3c7ce0266773c5fc320612" kind="variable"><name>ERROR_SCALAR_VALUE</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1a7ec3f15452df5c1b55f59fe10ebfd1fb" kind="variable"><name>ERROR_PARSE_FAILED</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1a64c35da16d6dc407e616183afe89baae" kind="variable"><name>ERROR_UNSUPPORTED_TYPE</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1ae06f850ad162a22ebe0e5c1a340b92e5" kind="variable"><name>ERROR_NO_DATA</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1adf5425be52c46798f720b116890b5d84" kind="function"><name>checkYaml</name></member>
+    <member refid="interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface_1aba6b44abcb174f3eb23fba1d0cfa4106" kind="function"><name>getResult</name></member>
+  </compound>
+  <compound refid="namespaceDrupal" kind="namespace"><name>Drupal</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1Core_1_1File_1_1FileSystemInterface" kind="namespace"><name>Drupal::Core::File::FileSystemInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1Core_1_1Logger_1_1LoggerChannelFactoryInterface" kind="namespace"><name>Drupal::Core::Logger::LoggerChannelFactoryInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1Core_1_1Messenger_1_1MessengerInterface" kind="namespace"><name>Drupal::Core::Messenger::MessengerInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1Core_1_1StreamWrapper_1_1StreamWrapperManagerInterface" kind="namespace"><name>Drupal::Core::StreamWrapper::StreamWrapperManagerInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit" kind="namespace"><name>Drupal::yaml_toolkit</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract" kind="namespace"><name>Drupal::yaml_toolkit::Contract</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper" kind="namespace"><name>Drupal::yaml_toolkit::Contract::Helper</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface" kind="namespace"><name>Drupal::yaml_toolkit::Contract::Helper::StreamWrapperManagerHelperInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service" kind="namespace"><name>Drupal::yaml_toolkit::Contract::Service</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface" kind="namespace"><name>Drupal::yaml_toolkit::Contract::Service::YamlStorageInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface" kind="namespace"><name>Drupal::yaml_toolkit::Contract::Service::YamlValidatorInterface</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Helper" kind="namespace"><name>Drupal::yaml_toolkit::Helper</name>
+  </compound>
+  <compound refid="namespaceDrupal_1_1yaml__toolkit_1_1Service" kind="namespace"><name>Drupal::yaml_toolkit::Service</name>
+  </compound>
+  <compound refid="namespaceSymfony_1_1Component_1_1Yaml_1_1Exception_1_1ParseException" kind="namespace"><name>Symfony::Component::Yaml::Exception::ParseException</name>
+  </compound>
+  <compound refid="namespaceSymfony_1_1Component_1_1Yaml_1_1Yaml" kind="namespace"><name>Symfony::Component::Yaml::Yaml</name>
+  </compound>
+  <compound refid="StreamWrapperManagerHelperInterface_8php" kind="file"><name>StreamWrapperManagerHelperInterface.php</name>
+  </compound>
+  <compound refid="YamlStorageInterface_8php" kind="file"><name>YamlStorageInterface.php</name>
+  </compound>
+  <compound refid="YamlValidatorInterface_8php" kind="file"><name>YamlValidatorInterface.php</name>
+  </compound>
+  <compound refid="StreamWrapperManagerHelper_8php" kind="file"><name>StreamWrapperManagerHelper.php</name>
+  </compound>
+  <compound refid="YamlStorage_8php" kind="file"><name>YamlStorage.php</name>
+  </compound>
+  <compound refid="YamlValidator_8php" kind="file"><name>YamlValidator.php</name>
+  </compound>
+  <compound refid="dir_69b5f04c422a7cafe2d0e32f9eb03524" kind="dir"><name>src/Contract</name>
+  </compound>
+  <compound refid="dir_adb00d217b0fbe73ddaca15ae98db134" kind="dir"><name>src/Contract/Helper</name>
+  </compound>
+  <compound refid="dir_98ea81643ef4886b338c8f848f4e06a0" kind="dir"><name>src/Helper</name>
+  </compound>
+  <compound refid="dir_88a079d565c1e83169fe57e4cb2e68be" kind="dir"><name>src/Contract/Service</name>
+  </compound>
+  <compound refid="dir_6ffc343ef0b33b8e0e31ec7afba90a0a" kind="dir"><name>src/Service</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>
