@@ -1,0 +1,5 @@
+name: 'Yaml Toolkit'
+type: module
+description: 'Provides a validator and tools for reading and writing yaml files'
+package: Custom
+core_version_requirement: ^10 || ^11

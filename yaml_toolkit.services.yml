@@ -1,0 +1,30 @@
+services:
+
+  yaml_toolkit.yaml_storage:
+    class: Drupal\yaml_toolkit\Service\YamlStorage
+    arguments:
+      - '@file_system'
+      - '@logger.factory'
+      - '@messenger'
+      - '@yaml_toolkit.yaml_validator'
+      - '@yaml_toolkit.stream_wrapper_manager_helper'
+    tags:
+      -name: service
+
+  Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface: '@yaml_toolkit.yaml_storage'
+  
+  yaml_toolkit.yaml_validator:
+    class: Drupal\yaml_toolkit\Service\YamlValidator
+    tags:
+      -name: service
+
+  Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface: '@yaml_toolkit.yaml_validator'
+
+  yaml_toolkit.stream_wrapper_manager_helper:
+    class: Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper
+    arguments: 
+      - '@stream_wrapper_manager'
+    tags:
+      -name: service
+
+  Drupal\yaml_toolkit\Contract\Helper\StreamWrapperManagerHelperInterface: '@yaml_toolkit.stream_wrapper_manager_helper'

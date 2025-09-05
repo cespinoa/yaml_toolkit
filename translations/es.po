@@ -1,0 +1,94 @@
+# Spanish translation for YAML Toolkit module
+msgid ""
+msgstr ""
+"Project-Id-Version: YAML Toolkit 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 12:00+0000\n"
+"PO-Revision-Date: 2025-01-01 12:00+0000\n"
+"Last-Translator: Carlos Espino <carlos.espino@guatiza.org>\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+# ERROR_EMPTY_PATH = 1
+msgid "Empty file path provided"
+msgstr "La ruta de archivo proporcionada está vacía"
+
+# ERROR_FILE_NOT_FOUND = 2
+msgid "File %filename not found"
+msgstr "No se puede encontrar el archivo %filename"
+
+# ERROR_FILE_NOT_READABLE = 3
+msgid "File %filename is not readable"
+msgstr "El archivo %filename no es legible"
+
+# ERROR_FILE_NOT_WRITABLE = 4;
+msgid "File %filename is not writable"
+msgstr "El archivo %filename no es escribible"
+
+# ERROR_READ_FAILED = 5
+msgid "The file %filename could not be read"
+msgstr "El archivo %filename no pudo ser leido"
+
+# ERROR_EMPTY_FILE = 6
+msgid "The file %filename is empty"
+msgstr "El archivo %filename está vacío"
+
+# ERROR_NO_YAML_DATA = 7
+msgid "File %filename has no YAML data"
+msgstr "El archivo %filename no contiene datos YAML"
+
+# ERROR_WRITE_FAILED = 8
+msgid "The file %filename cannot be written."
+msgstr "El archivo %filename no pudo ser escrito."
+
+#ERROR_NO_DATA = 9
+msgid "No data provided"
+msgstr "No se han proporcionado datos"
+
+# ERROR_VALIDATION_FAILED = 10
+msgid "YAML validation failed"
+msgstr "Ha fallado la validación del YAML"
+
+msgid "Loading"
+msgstr "Cargando"
+
+msgid "Saving"
+msgstr "Guardando"
+
+msgid "@stage_action the file: %filename: "
+msgstr "@stage_action el fichero: %filename: "
+
+# ERROR_SCALAR_VALUE = 11
+msgid "Scalar value"
+msgstr "Valor escalar"
+
+msgid "Scalar values ​​are not evaluated"
+msgstr "Los valores escalares no son evaluados"
+
+# ERROR_PARSE_FAILED = 12
+msgid "Conversion to yaml failed"
+msgstr "La conversión a yaml ha fallado"
+
+# ERROR_UNSUPPORTED_TYPE = 13
+msgid "Unsupported input type"
+msgstr "Los datos recibido no son soportados"
+
+# ERROR_NO_DATA = 14
+msgid "Empty input"
+msgstr "Entrada de datos vacía"
+
+msgid "No data to validate"
+msgstr "No hay datos para validar"
+
+msgid "YAML Validator received empty or null data"
+msgstr "El validador YAML ha recibido datos vacíos o nulos"
+
+
+
+
+
