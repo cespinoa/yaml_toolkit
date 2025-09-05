@@ -2879,3 +2879,5 @@ XML_OUTPUT = xml
 # (Opcional) también salida en HTML si quieres revisar localmente
 GENERATE_HTML = YES
 HTML_OUTPUT = html
+
+USE_MDFILE_AS_MAINPAGE = README.md
