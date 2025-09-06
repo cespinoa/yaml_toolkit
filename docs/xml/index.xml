@@ -131,6 +131,8 @@
   </compound>
   <compound refid="YamlValidator_8php" kind="file"><name>YamlValidator.php</name>
   </compound>
+  <compound refid="yaml__toolkit__main__page_8php" kind="file"><name>yaml_toolkit_main_page.php</name>
+  </compound>
   <compound refid="dir_69b5f04c422a7cafe2d0e32f9eb03524" kind="dir"><name>src/Contract</name>
   </compound>
   <compound refid="dir_adb00d217b0fbe73ddaca15ae98db134" kind="dir"><name>src/Contract/Helper</name>

@@ -7,15 +7,6 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">/**</highlight></codeline>
-<codeline><highlight class="normal"><sp/>*<sp/>@mainpage<sp/>YAML<sp/>Toolkit</highlight></codeline>
-<codeline><highlight class="normal"><sp/>*</highlight></codeline>
-<codeline><highlight class="normal"><sp/>*<sp/>Bienvenido<sp/>a<sp/>la<sp/>documentación<sp/>del<sp/>proyecto<sp/>YAML<sp/>Toolkit.</highlight></codeline>
-<codeline><highlight class="normal"><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/>*<sp/>-<sp/>Visita<sp/>las<sp/>clases:<sp/>@ref<sp/>Drupal::yaml_toolkit</highlight></codeline>
-<codeline><highlight class="normal"><sp/>*<sp/>-<sp/>Interfaces:<sp/>@ref<sp/>Drupal::yaml_toolkit::Contract</highlight></codeline>
-<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">#<sp/>YAML<sp/>Toolkit</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Provides<sp/>robust<sp/>YAML<sp/>validation<sp/>and<sp/>file<sp/>handling<sp/>services<sp/>for<sp/>Drupal<sp/>applications.</highlight></codeline>
