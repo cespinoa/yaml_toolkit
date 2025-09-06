@@ -1,3 +1,12 @@
+/**
+ * @mainpage YAML Toolkit
+ *
+ * Bienvenido a la documentación del proyecto YAML Toolkit.
+ * 
+ * - Visita las clases: @ref Drupal::yaml_toolkit
+ * - Interfaces: @ref Drupal::yaml_toolkit::Contract
+ */
+
 # YAML Toolkit
 
 Provides robust YAML validation and file handling services for Drupal applications.

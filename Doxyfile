@@ -2863,8 +2863,6 @@ MSCGEN_TOOL            =
 MSCFILE_DIRS           =
 
 
-# Directorio donde buscar el código PHP de tu módulo
-INPUT = ./src
 
 # Extensiones a analizar
 FILE_PATTERNS = *.php
@@ -2883,13 +2881,11 @@ HTML_OUTPUT = docs/html
 GENERATE_LATEX = yes
 LATEX_OUTPUT = docs/latex
 
-USE_MDFILE_AS_MAINPAGE = yes
-
-
+GENERATE_TREEVIEW = YES
 
 
 # Rutas de entrada (añade el README.md si no está en ./src).
-INPUT = ./src README.md
+INPUT = README.md src/
 
 # Permitir parsear Markdown
 MARKDOWN_SUPPORT = YES
