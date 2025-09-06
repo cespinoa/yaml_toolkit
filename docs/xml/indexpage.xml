@@ -1,0 +1,270 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>YAML Toolkit</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="index_1md_README"/> Provides robust YAML validation and file handling services for Drupal applications.</para>
+<sect1 id="index_1autotoc_md1">
+<title>Table of contents</title>
+<para><itemizedlist>
+<listitem><para>Requirements</para>
+</listitem><listitem><para>Installation</para>
+</listitem><listitem><para>Configuration</para>
+</listitem><listitem><para>Usage</para>
+</listitem><listitem><para>Services</para>
+</listitem><listitem><para>API</para>
+</listitem><listitem><para>Troubleshooting</para>
+</listitem><listitem><para>Maintainers</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md2">
+<title>Requirements</title>
+<para>This module requires the following modules/libraries:</para>
+<para><itemizedlist>
+<listitem><para>Drupal: ^9.0 || ^10.0 || ^11.0</para>
+</listitem><listitem><para>PHP: ^8.1</para>
+</listitem><listitem><para>Symfony YAML Component: ^6.0 || ^7.0</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="index_1autotoc_md3">
+<title>Installation</title>
+<para>Install as you would normally install a contributed Drupal module. For further information, see <ulink url="https://www.drupal.org/docs/extending-drupal/installing-drupal-modules">Installing Drupal Modules</ulink>.</para>
+<sect2 id="index_1autotoc_md4">
+<title>Via Composer (recommended)</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">composer<sp/>require<sp/>drupal/yaml_toolkit</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md5">
+<title>Manual installation</title>
+<para><orderedlist>
+<listitem><para>Download the latest version from the <ulink url="https://www.drupal.org/project/yaml_toolkit">project page</ulink>.</para>
+</listitem><listitem><para>Extract the archive to your <computeroutput>modules/contrib</computeroutput> directory.</para>
+</listitem><listitem><para>Enable the module at <computeroutput>admin/modules</computeroutput>.</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md6">
+<title>Configuration</title>
+<para>No configuration is required. The module provides services that can be injected into your custom code.</para>
+</sect1>
+<sect1 id="index_1autotoc_md7">
+<title>Usage</title>
+<sect2 id="index_1autotoc_md8">
+<title>Basic YAML validation</title>
+<para><programlisting filename=".php"><codeline><highlight class="comment">//<sp/>Get<sp/>the<sp/>validator<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$validator<sp/>=<sp/>\Drupal::service(</highlight><highlight class="stringliteral">&apos;yaml_toolkit.validator&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Validate<sp/>a<sp/>YAML<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$yamlString<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline><highlight class="stringliteral">key1:<sp/>value1</highlight></codeline>
+<codeline><highlight class="stringliteral">key2:</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>-<sp/>item1</highlight></codeline>
+<codeline><highlight class="stringliteral"><sp/><sp/>-<sp/>item2</highlight></codeline>
+<codeline><highlight class="stringliteral">&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$isValid<sp/>=<sp/>$validator-&gt;checkYaml($yamlString);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>$validator-&gt;getResult();</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($isValid)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$parsedData<sp/>=<sp/>$result[</highlight><highlight class="stringliteral">&apos;parsed&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$yamlOutput<sp/>=<sp/>$result[</highlight><highlight class="stringliteral">&apos;yaml&apos;</highlight><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md9">
+<title>File operations</title>
+<para><programlisting filename=".php"><codeline><highlight class="comment">//<sp/>Get<sp/>the<sp/>storage<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$storage<sp/>=<sp/>\Drupal::service(</highlight><highlight class="stringliteral">&apos;yaml_toolkit.storage&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Load<sp/>YAML<sp/>from<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$data<sp/>=<sp/>$storage-&gt;load(</highlight><highlight class="stringliteral">&apos;path/to/config.yml&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;my_module&apos;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>($data<sp/>!==<sp/>FALSE)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Process<sp/>the<sp/>loaded<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$zones<sp/>=<sp/>$data[</highlight><highlight class="stringliteral">&apos;zones&apos;</highlight><highlight class="normal">]<sp/>??<sp/>[];</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="comment">//<sp/>Save<sp/>YAML<sp/>to<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$configData<sp/>=<sp/>[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="stringliteral">&apos;zones&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;content&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;title&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/>[</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;plugin&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;title_template&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;tag&apos;</highlight><highlight class="normal"><sp/>=&gt;<sp/></highlight><highlight class="stringliteral">&apos;h2&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>],</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>],</highlight></codeline>
+<codeline><highlight class="normal">];</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">$success<sp/>=<sp/>$storage-&gt;save(</highlight><highlight class="stringliteral">&apos;path/to/config.yml&apos;</highlight><highlight class="normal">,<sp/>$configData,<sp/></highlight><highlight class="stringliteral">&apos;my_module&apos;</highlight><highlight class="normal">,<sp/>TRUE);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!$success)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>$error<sp/>=<sp/>$storage-&gt;getInfo();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>\Drupal::logger(</highlight><highlight class="stringliteral">&apos;my_module&apos;</highlight><highlight class="normal">)-&gt;error($error[</highlight><highlight class="stringliteral">&apos;error_text&apos;</highlight><highlight class="normal">]);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md10">
+<title>Services</title>
+<sect2 id="index_1autotoc_md11">
+<title>yaml_toolkit.validator</title>
+<para>Validates YAML content in multiple formats:</para>
+<para><itemizedlist>
+<listitem><para>Raw YAML strings</para>
+</listitem><listitem><para>PHP arrays (will be dumped and re-parsed)</para>
+</listitem><listitem><para>Arrays of YAML strings</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Service ID</bold>: <computeroutput>yaml_toolkit.validator</computeroutput> <linebreak/>
+ <bold>Interface</bold>: <computeroutput>Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface</computeroutput> <linebreak/>
+ <bold>Class</bold>: <computeroutput>Drupal\yaml_toolkit\Service\YamlValidator</computeroutput></para>
+<sect3 id="index_1autotoc_md12">
+<title>Methods</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>checkYaml($data)</computeroutput>: Validates YAML content</para>
+</listitem><listitem><para><computeroutput>getResult()</computeroutput>: Returns detailed validation information</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+<sect2 id="index_1autotoc_md13">
+<title>yaml_toolkit.storage</title>
+<para>Handles YAML file operations with validation and error handling.</para>
+<para><bold>Service ID</bold>: <computeroutput>yaml_toolkit.storage</computeroutput> <linebreak/>
+ <bold>Interface</bold>: <computeroutput>Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface</computeroutput> <linebreak/>
+ <bold>Class</bold>: <computeroutput>Drupal\yaml_toolkit\Service\YamlStorage</computeroutput></para>
+<sect3 id="index_1autotoc_md14">
+<title>Methods</title>
+<para><itemizedlist>
+<listitem><para><computeroutput>load($filePath, $loggerChannel, $verbose)</computeroutput>: Load and validate YAML file</para>
+</listitem><listitem><para><computeroutput>save($filePath, $data, $loggerChannel, $verbose)</computeroutput>: Save data as YAML file</para>
+</listitem><listitem><para><computeroutput>getInfo()</computeroutput>: Get detailed information about the last operation</para>
+</listitem></itemizedlist>
+</para>
+</sect3>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md15">
+<title>API</title>
+<sect2 id="index_1autotoc_md16">
+<title>YamlValidatorInterface</title>
+<para><programlisting filename=".php"><codeline><highlight class="keyword">interface<sp/></highlight><highlight class="normal">YamlValidatorInterface<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_SUCCESS<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_VALIDATION_FAILED<sp/>=<sp/>10;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_SCALAR_VALUE<sp/>=<sp/>11;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_PARSE_FAILED<sp/>=<sp/>12;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_UNSUPPORTED_TYPE<sp/>=<sp/>13;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_NO_DATA<sp/>=<sp/>14;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>checkYaml($content):<sp/>bool;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>getResult():<sp/>array;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md17">
+<title>YamlStorageInterface</title>
+<para><programlisting filename=".php"><codeline><highlight class="keyword">interface<sp/></highlight><highlight class="normal">YamlStorageInterface<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_SUCCESS<sp/>=<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_EMPTY_PATH<sp/>=<sp/>1;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_FILE_NOT_FOUND<sp/>=<sp/>2;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_FILE_NOT_READABLE<sp/>=<sp/>3;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_FILE_NOT_WRITABLE<sp/>=<sp/>4;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_READ_FAILED<sp/>=<sp/>5;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_EMPTY_FILE<sp/>=<sp/>6;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_NO_YAML_DATA<sp/>=<sp/>7;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_WRITE_FAILED<sp/>=<sp/>8;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ERROR_NO_DATA<sp/>=<sp/>9;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>save(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>$filePath,<sp/>array<sp/>$data,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>$loggerChannel<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>$verbose<sp/>=<sp/>FALSE);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>load(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>$filePath,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>$loggerChannel<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;default&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>$verbose<sp/>=<sp/>FALSE);</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>getInfo():<sp/>array;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md18">
+<title>Error codes</title>
+<para>The validator uses the following error codes:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>0</computeroutput>: Success</para>
+</listitem><listitem><para><computeroutput>10</computeroutput>: YAML validation failed</para>
+</listitem><listitem><para><computeroutput>11</computeroutput>: Scalar value (not supported)</para>
+</listitem><listitem><para><computeroutput>12</computeroutput>: Conversion to YAML failed</para>
+</listitem><listitem><para><computeroutput>13</computeroutput>: Unsupported input type</para>
+</listitem><listitem><para><computeroutput>14</computeroutput>: No data provided</para>
+</listitem></itemizedlist>
+</para>
+<para>The storage service uses additional error codes:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>1</computeroutput>: Empty file path</para>
+</listitem><listitem><para><computeroutput>2</computeroutput>: File not found</para>
+</listitem><listitem><para><computeroutput>3</computeroutput>: File not readable</para>
+</listitem><listitem><para><computeroutput>4</computeroutput>: File not writable</para>
+</listitem><listitem><para><computeroutput>5</computeroutput>: File read failed</para>
+</listitem><listitem><para><computeroutput>6</computeroutput>: Empty file</para>
+</listitem><listitem><para><computeroutput>7</computeroutput>: No YAML data</para>
+</listitem><listitem><para><computeroutput>8</computeroutput>: File write failed</para>
+</listitem><listitem><para><computeroutput>9</computeroutput>: YAML dump failed</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md19">
+<title>Troubleshooting</title>
+<sect2 id="index_1autotoc_md20">
+<title>Common issues</title>
+<para>**&quot;File not found&quot; errors**<itemizedlist>
+<listitem><para>Check file permissions</para>
+</listitem><listitem><para>Verify the file path is correct</para>
+</listitem><listitem><para>Ensure the file exists before attempting to load</para>
+</listitem></itemizedlist>
+</para>
+<para>**&quot;YAML validation failed&quot;**<itemizedlist>
+<listitem><para>Check YAML syntax using an online validator</para>
+</listitem><listitem><para>Ensure proper indentation (2 spaces per level)</para>
+</listitem><listitem><para>Verify quotes and special characters are properly escaped</para>
+</listitem></itemizedlist>
+</para>
+<para>**&quot;File not writable&quot; errors**<itemizedlist>
+<listitem><para>Check directory and file permissions</para>
+</listitem><listitem><para>Ensure the web server can write to the target directory</para>
+</listitem><listitem><para>Verify disk space is available</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md21">
+<title>Debugging</title>
+<para>Enable verbose mode to display errors in the Drupal UI:</para>
+<para><programlisting filename=".php"><codeline><highlight class="normal">$storage<sp/>=<sp/>\Drupal::service(</highlight><highlight class="stringliteral">&apos;yaml_toolkit.storage&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline><highlight class="normal">$result<sp/>=<sp/>$storage-&gt;load(</highlight><highlight class="stringliteral">&apos;config.yml&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;my_module&apos;</highlight><highlight class="normal">,<sp/>TRUE);<sp/></highlight><highlight class="comment">//<sp/>verbose<sp/>=<sp/>TRUE</highlight></codeline>
+</programlisting></para>
+<para>Check the logs for detailed error information:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">drush<sp/>watchdog-show<sp/>--type=my_module</highlight></codeline>
+</programlisting></para>
+</sect2>
+</sect1>
+<sect1 id="index_1autotoc_md22">
+<title>Maintainers</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://www.drupal.org/u/carlos-espino">Carlos Espino Angulo</ulink> </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

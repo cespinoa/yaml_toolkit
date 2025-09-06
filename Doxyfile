@@ -2874,10 +2874,25 @@ RECURSIVE = YES
 
 # Salida en XML (el módulo API de Drupal usa esto)
 GENERATE_XML = YES
-XML_OUTPUT = xml
+XML_OUTPUT = docs/xml
 
 # (Opcional) también salida en HTML si quieres revisar localmente
 GENERATE_HTML = YES
-HTML_OUTPUT = html
+HTML_OUTPUT = docs/html
 
+GENERATE_LATEX = yes
+LATEX_OUTPUT = docs/latex
+
+USE_MDFILE_AS_MAINPAGE = yes
+
+
+
+
+# Rutas de entrada (añade el README.md si no está en ./src).
+INPUT = ./src README.md
+
+# Permitir parsear Markdown
+MARKDOWN_SUPPORT = YES
+
+# Archivo Markdown que se usará como portada
 USE_MDFILE_AS_MAINPAGE = README.md
