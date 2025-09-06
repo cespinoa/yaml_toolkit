@@ -2885,11 +2885,11 @@ GENERATE_TREEVIEW = YES
 
 
 # Rutas de entrada (añade el README.md si no está en ./src).
-#INPUT = README.md src/
-INPUT = src/
+INPUT = README.md src/
+
 
 # Permitir parsear Markdown
-# MARKDOWN_SUPPORT = YES
+MARKDOWN_SUPPORT = YES
 
 # Archivo Markdown que se usará como portada
-#USE_MDFILE_AS_MAINPAGE = README.md
+USE_MDFILE_AS_MAINPAGE = README.md
