@@ -1,3 +1,8 @@
+/**
+ * @mainpage Documentación del módulo YAML Toolkit
+ *
+ * Aquí va la descripción detallada de tu proyecto.
+ */
 # YAML Toolkit
 
 Provides robust YAML validation and file handling services for Drupal applications.

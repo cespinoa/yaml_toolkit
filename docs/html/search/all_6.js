@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['error_20codes_0',['Error codes',['../index.html#autotoc_md18',1,'']]]
+  ['getinfo_0',['getinfo',['../interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface.html#adb51a6baab6569594cd65e1f832367ff',1,'Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface\getInfo()'],['../classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage.html#a70a5e23d0c5acff2ac689af1b0498932',1,'Drupal\yaml_toolkit\Service\YamlStorage\getInfo()']]],
+  ['getresult_1',['getresult',['../interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlValidatorInterface.html#aba6b44abcb174f3eb23fba1d0cfa4106',1,'Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface\getResult()'],['../classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlValidator.html#a0578413dc3059ba35c0c0b92a8a1117f',1,'Drupal\yaml_toolkit\Service\YamlValidator\getResult()']]],
+  ['getscheme_2',['getscheme',['../interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Helper_1_1StreamWrapperManagerHelperInterface.html#a6ed8c53126853079a451c1592fc148c3',1,'Drupal\yaml_toolkit\Contract\Helper\StreamWrapperManagerHelperInterface\getScheme()'],['../classDrupal_1_1yaml__toolkit_1_1Helper_1_1StreamWrapperManagerHelper.html#a06cf3a2a481bc7e8916186e2a61b73b6',1,'Drupal\yaml_toolkit\Helper\StreamWrapperManagerHelper\getScheme()']]]
 ];

@@ -7,6 +7,11 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@mainpage<sp/>Documentación<sp/>del<sp/>módulo<sp/>YAML<sp/>Toolkit</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>Aquí<sp/>va<sp/>la<sp/>descripción<sp/>detallada<sp/>de<sp/>tu<sp/>proyecto.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
 <codeline><highlight class="normal">#<sp/>YAML<sp/>Toolkit</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Provides<sp/>robust<sp/>YAML<sp/>validation<sp/>and<sp/>file<sp/>handling<sp/>services<sp/>for<sp/>Drupal<sp/>applications.</highlight></codeline>

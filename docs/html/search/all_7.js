@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fail_0',['fail',['../classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage.html#aa056fbf507e5cd7c81a8636f3b3825fe',1,'Drupal::yaml_toolkit::Service::YamlStorage']]],
-  ['file_20operations_1',['File operations',['../index.html#autotoc_md9',1,'']]]
+  ['load_0',['load',['../interfaceDrupal_1_1yaml__toolkit_1_1Contract_1_1Service_1_1YamlStorageInterface.html#af11500171b0b8d53c0e255c60a7f0297',1,'Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface\load()'],['../classDrupal_1_1yaml__toolkit_1_1Service_1_1YamlStorage.html#a3bbc6028cc81f30444e81ab0d6446cad',1,'Drupal\yaml_toolkit\Service\YamlStorage\load()']]]
 ];

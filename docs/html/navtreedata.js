@@ -25,35 +25,7 @@
 var NAVTREE =
 [
   [ "Yaml Toolkit", "index.html", [
-    [ "Table of contents", "index.html#autotoc_md1", null ],
-    [ "Requirements", "index.html#autotoc_md2", null ],
-    [ "Installation", "index.html#autotoc_md3", [
-      [ "Via Composer (recommended)", "index.html#autotoc_md4", null ],
-      [ "Manual installation", "index.html#autotoc_md5", null ]
-    ] ],
-    [ "Configuration", "index.html#autotoc_md6", null ],
-    [ "Usage", "index.html#autotoc_md7", [
-      [ "Basic YAML validation", "index.html#autotoc_md8", null ],
-      [ "File operations", "index.html#autotoc_md9", null ]
-    ] ],
-    [ "Services", "index.html#autotoc_md10", [
-      [ "yaml_toolkit.validator", "index.html#autotoc_md11", [
-        [ "Methods", "index.html#autotoc_md12", null ]
-      ] ],
-      [ "yaml_toolkit.storage", "index.html#autotoc_md13", [
-        [ "Methods", "index.html#autotoc_md14", null ]
-      ] ]
-    ] ],
-    [ "API", "index.html#autotoc_md15", [
-      [ "YamlValidatorInterface", "index.html#autotoc_md16", null ],
-      [ "YamlStorageInterface", "index.html#autotoc_md17", null ],
-      [ "Error codes", "index.html#autotoc_md18", null ]
-    ] ],
-    [ "Troubleshooting", "index.html#autotoc_md19", [
-      [ "Common issues", "index.html#autotoc_md20", null ],
-      [ "Debugging", "index.html#autotoc_md21", null ]
-    ] ],
-    [ "Maintainers", "index.html#autotoc_md22", null ],
+    [ "API Viewer", "index.html", "index" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -117,8 +117,6 @@
   </compound>
   <compound refid="namespaceSymfony_1_1Component_1_1Yaml_1_1Yaml" kind="namespace"><name>Symfony::Component::Yaml::Yaml</name>
   </compound>
-  <compound refid="README_8md" kind="file"><name>README.md</name>
-  </compound>
   <compound refid="StreamWrapperManagerHelperInterface_8php" kind="file"><name>StreamWrapperManagerHelperInterface.php</name>
   </compound>
   <compound refid="YamlStorageInterface_8php" kind="file"><name>YamlStorageInterface.php</name>

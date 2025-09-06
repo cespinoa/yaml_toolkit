@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Yaml Toolkit: YAML Toolkit</title>
+<title>Yaml Toolkit: API Viewer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -89,226 +89,22 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">YAML Toolkit </div></div>
+  <div class="headertitle"><div class="title">API Viewer </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> Provides robust YAML validation and file handling services for Drupal applications.</p>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md0"></a>
+Descripción</h1>
+<p>Este módulo proporciona una interfaz para explorar la documentación PHP de forma integrada en Drupal, usando Doxygen + API module.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Table of contents</h1>
+Contenido</h1>
 <ul>
-<li>Requirements</li>
-<li>Installation</li>
-<li>Configuration</li>
-<li><a class="el" href="/var/www/test.local/web/modules/to_contrib/yaml_toolkit/src/yaml_toolkit_main_page.php#usage">Usage</a></li>
-<li>Services</li>
-<li>API</li>
-<li>Troubleshooting</li>
-<li>Maintainers</li>
+<li>Clases en <code>src/</code></li>
+<li>Hooks en <code>api_viewer.module</code></li>
+<li>Archivos de configuración</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md2"></a>
-Requirements</h1>
-<p>This module requires the following modules/libraries:</p>
-<ul>
-<li>Drupal: ^9.0 || ^10.0 || ^11.0</li>
-<li>PHP: ^8.1</li>
-<li>Symfony YAML Component: ^6.0 || ^7.0</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md3"></a>
-Installation</h1>
-<p>Install as you would normally install a contributed Drupal module. For further information, see <a href="https://www.drupal.org/docs/extending-drupal/installing-drupal-modules">Installing Drupal Modules</a>.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Via Composer (recommended)</h2>
-<div class="fragment"><div class="line">composer require drupal/yaml_toolkit</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
-Manual installation</h2>
-<ol type="1">
-<li>Download the latest version from the <a href="https://www.drupal.org/project/yaml_toolkit">project page</a>.</li>
-<li>Extract the archive to your <code>modules/contrib</code> directory.</li>
-<li>Enable the module at <code>admin/modules</code>.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Configuration</h1>
-<p>No configuration is required. The module provides services that can be injected into your custom code.</p>
-<h1><a class="anchor" id="autotoc_md7"></a>
-Usage</h1>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Basic YAML validation</h2>
-<div class="fragment"><div class="line"><span class="comment">// Get the validator service</span></div>
-<div class="line">$validator = \Drupal::service(<span class="stringliteral">&#39;yaml_toolkit.validator&#39;</span>);</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Validate a YAML string</span></div>
-<div class="line">$yamlString = <span class="stringliteral">&quot;</span></div>
-<div class="line"><span class="stringliteral">key1: value1</span></div>
-<div class="line"><span class="stringliteral">key2:</span></div>
-<div class="line"><span class="stringliteral">  - item1</span></div>
-<div class="line"><span class="stringliteral">  - item2</span></div>
-<div class="line"><span class="stringliteral">&quot;</span>;</div>
-<div class="line"> </div>
-<div class="line">$isValid = $validator-&gt;checkYaml($yamlString);</div>
-<div class="line">$result = $validator-&gt;getResult();</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> ($isValid) {</div>
-<div class="line">  $parsedData = $result[<span class="stringliteral">&#39;parsed&#39;</span>];</div>
-<div class="line">  $yamlOutput = $result[<span class="stringliteral">&#39;yaml&#39;</span>];</div>
-<div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md9"></a>
-File operations</h2>
-<div class="fragment"><div class="line"><span class="comment">// Get the storage service</span></div>
-<div class="line">$storage = \Drupal::service(<span class="stringliteral">&#39;yaml_toolkit.storage&#39;</span>);</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Load YAML from file</span></div>
-<div class="line">$data = $storage-&gt;load(<span class="stringliteral">&#39;path/to/config.yml&#39;</span>, <span class="stringliteral">&#39;my_module&#39;</span>, TRUE);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> ($data !== FALSE) {</div>
-<div class="line">  <span class="comment">// Process the loaded data</span></div>
-<div class="line">  $zones = $data[<span class="stringliteral">&#39;zones&#39;</span>] ?? [];</div>
-<div class="line">}</div>
-<div class="line"> </div>
-<div class="line"><span class="comment">// Save YAML to file</span></div>
-<div class="line">$configData = [</div>
-<div class="line">  <span class="stringliteral">&#39;zones&#39;</span> =&gt; [</div>
-<div class="line">    <span class="stringliteral">&#39;content&#39;</span> =&gt; [</div>
-<div class="line">      <span class="stringliteral">&#39;title&#39;</span> =&gt; [</div>
-<div class="line">        <span class="stringliteral">&#39;plugin&#39;</span> =&gt; <span class="stringliteral">&#39;title_template&#39;</span>,</div>
-<div class="line">        <span class="stringliteral">&#39;tag&#39;</span> =&gt; <span class="stringliteral">&#39;h2&#39;</span>,</div>
-<div class="line">      ],</div>
-<div class="line">    ],</div>
-<div class="line">  ],</div>
-<div class="line">];</div>
-<div class="line"> </div>
-<div class="line">$success = $storage-&gt;save(<span class="stringliteral">&#39;path/to/config.yml&#39;</span>, $configData, <span class="stringliteral">&#39;my_module&#39;</span>, TRUE);</div>
-<div class="line"> </div>
-<div class="line"><span class="keywordflow">if</span> (!$success) {</div>
-<div class="line">  $error = $storage-&gt;getInfo();</div>
-<div class="line">  \Drupal::logger(<span class="stringliteral">&#39;my_module&#39;</span>)-&gt;error($error[<span class="stringliteral">&#39;error_text&#39;</span>]);</div>
-<div class="line">}</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md10"></a>
-Services</h1>
-<h2><a class="anchor" id="autotoc_md11"></a>
-yaml_toolkit.validator</h2>
-<p>Validates YAML content in multiple formats:</p>
-<ul>
-<li>Raw YAML strings</li>
-<li>PHP arrays (will be dumped and re-parsed)</li>
-<li>Arrays of YAML strings</li>
-</ul>
-<p><b>Service ID</b>: <code>yaml_toolkit.validator</code> <br  />
- <b>Interface</b>: <code>Drupal\yaml_toolkit\Contract\Service\YamlValidatorInterface</code> <br  />
- <b>Class</b>: <code>Drupal\yaml_toolkit\Service\YamlValidator</code></p>
-<h3><a class="anchor" id="autotoc_md12"></a>
-Methods</h3>
-<ul>
-<li><code>checkYaml($data)</code>: Validates YAML content</li>
-<li><code>getResult()</code>: Returns detailed validation information</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md13"></a>
-yaml_toolkit.storage</h2>
-<p>Handles YAML file operations with validation and error handling.</p>
-<p><b>Service ID</b>: <code>yaml_toolkit.storage</code> <br  />
- <b>Interface</b>: <code>Drupal\yaml_toolkit\Contract\Service\YamlStorageInterface</code> <br  />
- <b>Class</b>: <code>Drupal\yaml_toolkit\Service\YamlStorage</code></p>
-<h3><a class="anchor" id="autotoc_md14"></a>
-Methods</h3>
-<ul>
-<li><code>load($filePath, $loggerChannel, $verbose)</code>: Load and validate YAML file</li>
-<li><code>save($filePath, $data, $loggerChannel, $verbose)</code>: Save data as YAML file</li>
-<li><code>getInfo()</code>: Get detailed information about the last operation</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md15"></a>
-API</h1>
-<h2><a class="anchor" id="autotoc_md16"></a>
-YamlValidatorInterface</h2>
-<div class="fragment"><div class="line"><span class="keyword">interface </span>YamlValidatorInterface {</div>
-<div class="line"> </div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">const</span> ERROR_SUCCESS = 0;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_VALIDATION_FAILED = 10;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_SCALAR_VALUE = 11;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_PARSE_FAILED = 12;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_UNSUPPORTED_TYPE = 13;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_NO_DATA = 14;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">public</span> <span class="keyword">function</span> checkYaml($content): bool;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">public</span> <span class="keyword">function</span> getResult(): array;</div>
-<div class="line"> </div>
-<div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md17"></a>
-YamlStorageInterface</h2>
-<div class="fragment"><div class="line"><span class="keyword">interface </span>YamlStorageInterface {</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">const</span> ERROR_SUCCESS = 0;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_EMPTY_PATH = 1;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_FILE_NOT_FOUND = 2;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_FILE_NOT_READABLE = 3;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_FILE_NOT_WRITABLE = 4;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_READ_FAILED = 5;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_EMPTY_FILE = 6;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_NO_YAML_DATA = 7;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_WRITE_FAILED = 8;</div>
-<div class="line">  <span class="keyword">const</span> ERROR_NO_DATA = 9;</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">public</span> <span class="keyword">function</span> save(<span class="keywordtype">string</span> $filePath, array $data, <span class="keywordtype">string</span> $loggerChannel = <span class="stringliteral">&#39;default&#39;</span>, <span class="keywordtype">bool</span> $verbose = FALSE);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">public</span> <span class="keyword">function</span> load(<span class="keywordtype">string</span> $filePath, <span class="keywordtype">string</span> $loggerChannel = <span class="stringliteral">&#39;default&#39;</span>, <span class="keywordtype">bool</span> $verbose = FALSE);</div>
-<div class="line"> </div>
-<div class="line">  <span class="keyword">public</span> <span class="keyword">function</span> getInfo(): array;</div>
-<div class="line"> </div>
-<div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md18"></a>
-Error codes</h2>
-<p>The validator uses the following error codes:</p>
-<ul>
-<li><code>0</code>: Success</li>
-<li><code>10</code>: YAML validation failed</li>
-<li><code>11</code>: Scalar value (not supported)</li>
-<li><code>12</code>: Conversion to YAML failed</li>
-<li><code>13</code>: Unsupported input type</li>
-<li><code>14</code>: No data provided</li>
-</ul>
-<p>The storage service uses additional error codes:</p>
-<ul>
-<li><code>1</code>: Empty file path</li>
-<li><code>2</code>: File not found</li>
-<li><code>3</code>: File not readable</li>
-<li><code>4</code>: File not writable</li>
-<li><code>5</code>: File read failed</li>
-<li><code>6</code>: Empty file</li>
-<li><code>7</code>: No YAML data</li>
-<li><code>8</code>: File write failed</li>
-<li><code>9</code>: YAML dump failed</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md19"></a>
-Troubleshooting</h1>
-<h2><a class="anchor" id="autotoc_md20"></a>
-Common issues</h2>
-<p>**"File not found" errors**</p><ul>
-<li>Check file permissions</li>
-<li>Verify the file path is correct</li>
-<li>Ensure the file exists before attempting to load</li>
-</ul>
-<p>**"YAML validation failed"**</p><ul>
-<li>Check YAML syntax using an online validator</li>
-<li>Ensure proper indentation (2 spaces per level)</li>
-<li>Verify quotes and special characters are properly escaped</li>
-</ul>
-<p>**"File not writable" errors**</p><ul>
-<li>Check directory and file permissions</li>
-<li>Ensure the web server can write to the target directory</li>
-<li>Verify disk space is available</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md21"></a>
-Debugging</h2>
-<p>Enable verbose mode to display errors in the Drupal UI:</p>
-<div class="fragment"><div class="line">$storage = \Drupal::service(<span class="stringliteral">&#39;yaml_toolkit.storage&#39;</span>);</div>
-<div class="line">$result = $storage-&gt;load(<span class="stringliteral">&#39;config.yml&#39;</span>, <span class="stringliteral">&#39;my_module&#39;</span>, TRUE); <span class="comment">// verbose = TRUE</span></div>
-</div><!-- fragment --><p>Check the logs for detailed error information:</p>
-<div class="fragment"><div class="line">drush watchdog-show --type=my_module</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md22"></a>
-Maintainers</h1>
-<ul>
-<li><a href="https://www.drupal.org/u/carlos-espino">Carlos Espino Angulo</a> </li>
-</ul>
+<h1><a class="anchor" id="usage"></a>
+Uso</h1>
+<p>Genera la documentación con Doxygen y navega en /api. </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->

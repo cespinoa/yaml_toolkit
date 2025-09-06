@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['toolkit_0',['YAML Toolkit',['../index.html',1,'']]]
+  ['api_20viewer_0',['API Viewer',['../index.html',1,'']]]
 ];
